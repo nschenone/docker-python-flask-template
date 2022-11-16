@@ -1,4 +1,4 @@
-def say_hello(name: str):
+def say_hello(name: str) -> str:
     """
     Says hello!
 

@@ -18,7 +18,7 @@ def home() -> str:
 
 
 @app.route("/hello/<name>")
-def hello(name: str):
+def hello(name: str) -> str:
     """
     Says hello!
 
