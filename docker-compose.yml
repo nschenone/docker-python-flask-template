@@ -1,0 +1,11 @@
+version: "3.3"
+
+services:
+  flask:
+    restart: unless-stopped
+    build: .
+    image: docker_python_flask_template
+    container_name: docker_python_flask_template
+    network_mode: "host"
+    environment:
+      - FLASK_PORT=${FLASK_PORT}
