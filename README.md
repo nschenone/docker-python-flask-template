@@ -19,7 +19,7 @@ The template contains the following files and directories:
 - `src/`: Directory for source code - will be copied into Docker image
     - `src/app.py`: Sample Flask application
     - `src/hello_world.py`: Sample Python script used in Flask app
-- `default.env`: Default environment file for secret management - should be renamed to `.env` and never checked into source controll
+- `default.env`: Default environment file for secret management - should be renamed to `.env` and never checked into source control
 - `docker-compose.yml`: Default Docker Compose file that injects secrets from `.env` file and builds Docker image specified by `Dockerfile`
 - `Dockerfile`: Default Dockerfile that copies source code, installs Python dependencies, and runs Flask server
 - `Makefile`: Helper to easily start, stop, and restart app
@@ -34,7 +34,8 @@ The sample application is purely a skeleton to build off of. There are two route
 
 ## Getting Started
 1. Clone the repository.
-1. Copy the `default.env` file to a new file called `.env` and populate with your desired port and any secrets. This should never be commited into source control.
+1. Copy the `default.env` file to a new file called `.env` and populate with your desired port and any secrets
+    - This should never be commited into source control - this template is setup to ensure the `.env` file is excluded from Git
 1. Build your Python application in the `src` directory.
 1. Deploy the app by running `make up`.
 1. Navigate to `http://<IP_ADDRESS>/<FLASK_PORT>` (e.g. [http://localhost:5050](http://localhost:5050)) in your browser - you should see `Connected` if successful. 
